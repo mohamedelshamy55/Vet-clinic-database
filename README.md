@@ -1,24 +1,29 @@
-# vet-clinic-database
+# Vet-clinic
 
-## Project Description
-Welcome to the Vet-Clinic-Database, an information store for pet animals, which tracks data such as pet-weight, nutered-state, date-of-birth and animal birth. 
+Welcome to the Vet-Clinic-Database, an information store for pet animals, which tracks data such as pet-weight, nutered-state, date-of-birth and animal birth.
+
+- Vet-clinic database creation.
+- In this project, database is crated in the postgresql and wrote SQL to create table.
+- create a table to store animals' information, insert some data into it, and query it.
+- SQL is used for query.
+
 
 ## Getting Started
-
-This repository includes files with plain SQL that can be used to recreate a database:
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
+## Built With
+- SQL.
 
-## Authors
+## Author
 
 👤 **Mohamed ELShamy**
 
-- GitHub: [@githubhandle](https://github.com/mohamedelshamy55)
-- Twitter: [@twitterhandle](https://mobile.twitter.com/moelshamy55)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamedelshamy85/)
+- GitHub: [@mohamedelshamy55](https://github.com/mohamedelshamy55)
+- Twitter: [@moelshamy55](https://mobile.twitter.com/moelshamy55)
+- LinkedIn: [mohamedelshamy85](https://www.linkedin.com/in/mohamedelshamy85/)
 
 
 ## 🤝 Contributing
