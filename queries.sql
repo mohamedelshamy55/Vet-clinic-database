@@ -95,7 +95,19 @@ SELECT animals.name, COUNT(animals.id) FROM animals JOIN visits ON animals.id = 
 SELECT animals.name, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animals_id JOIN vets ON vets.id = visits.vets_id WHERE vets.name = 'Maisy Smith' ORDER BY visits.date_of_visit ASC LIMIT 1;
 
 /* Details for most recent visit: animal information, vet information, and date of visit. */
-SELECT animals.name AS animal_name, animals.date_of_birth, animals.escape_attempts, animals.neutered, animals.weight_kg, vets.name AS vet_name, vets.age, vets.date_of_graduation, visits.date_of_visit FROM animals JOIN visits ON animals.id = visits.animals_id JOIN vets ON vets.id = visits.vets_id ORDER BY visits.date_of_visit DESC LIMIT 1;
+SELECT
+	date_of_visit,
+	animals.date_of_birth as animal_dob,
+	animals.escape_attempts,
+	animals.neutered,
+	animals.weight_kg as animal_weight,
+	vets.name as vet_name,
+	vets.age as vet_age,
+	vets.date_of_graduation
+from visits
+JOIN animals ON animals.id = visits.animals_id
+JOIN vets ON vets.id = visits.vets_id
+ORDER BY date_of_visit DESC LIMIT 1;
 
 /* How many visits were with a vet that did not specialize in that animal's species? */
 SELECT COUNT(visits.animals_id) FROM visits JOIN vets ON vets.id = visits.vets_id JOIN animals ON animals.id = visits.animals_id JOIN specializations ON specializations.vets_id = vets.id WHERE specializations.species_id <> animals.species_id;
